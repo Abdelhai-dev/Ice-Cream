@@ -1,0 +1,48 @@
+body {
+    border-color: rgb(199, 133, 133);
+}
+.navb {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8E8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+    
+
+}
+.navb a {
+    padding: 8px 8px 8px 36px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s ;
+}
+.navb a:hover {
+    color: #111;
+}
+.navb ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.navb.active {
+    left: 0;
+}
+.navb.closes {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+.burger-icon {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}

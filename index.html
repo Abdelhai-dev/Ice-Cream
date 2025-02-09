@@ -1,270 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./public/css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <title>Document</title>
 </head>
+
 <body>
-    <nav id="burger" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="./public/css/img romyk/logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ice-cream</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                </ul>
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal bg-secondary">
+    <div class="modal-content bg-dark w-25 h-50">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h1 class="text-center text-light">Login</h1>
+      <input class="bg-dark text-light" type="email" id="loginEmail" placeholder="Email">
+      <input class="bg-dark text-light" type="password" id="loginPassword" placeholder="Password">
+      <button class="btnRose" onclick="login()">Send</button>
+      <p class="text-center"><a class="lien" href="#" onclick="showModal('registerModal')">Not registered? Sign up
+          here</a></p>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal bg-secondary">
+    <div class="modal-content bg-dark w-25">
+      <span class="close" onclick="closeModal('registerModal')">&times;</span>
+      <h1 class="text-center text-light">Register</h1>
+      <input class="bg-dark text-light" type="text" id="registerName" placeholder="Name">
+      <input class="bg-dark text-light" type="email" id="registerEmail" placeholder="Email">
+      <input class="bg-dark text-light" type="tel" id="registerPhone" placeholder="Phone Number">
+      <input class="bg-dark text-light" type="password" id="registerPassword" placeholder="Password">
+      <button class="btnRose" onclick="register()">Send</button>
+    </div>
+  </div>
+
+  <!--NavBar-->
+
+  <nav id="burger" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./public/css/img romyk/logo.png" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="btnDark" id="open"></button>
+      <button class="btnDark" id="close"></button>
+      <div id="burger"></div>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link menu" href="#">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link menu" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu" href="#">Ice-cream</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menu" href="#">Service</a>
+          </li>
+          <li class="nav-item"><a class="nav-link menu" href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="btn-modal">
+        <div class="">
+          <button type="button" class="btn btn1" onclick="showModal('loginModal')">
+            Login <i class="bi bi-person-fill"></i>
+          </button>
+        </div>
+        <div>
+          <button class="Dark-Mode btnDark"><i class="bi bi-moon"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--Premiere section glace a la fraise-->
+
+  <section>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh">
+      <div class="row d-flex justify-content-center align-items-center mx-4">
+        <div class="col-lg-6 col-md-12 text-center text-lg-start">
+          <h1 class="fw-bold display-1">
+            Ice <br />
+            Cream
+          </h1>
+          <p class="text-muted">
+            Ice cream is a delightful frozen treat made from <br />
+            cream, sugar, and flavors. Enjoyed worldwide, it brings happiness
+            <br />
+            in various forms, from cones to sundaes.
+          </p>
+          <button type="button" class="btn btn-lg">Secondary</button>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <img class="img-fluid image" src="./public/css/img romyk/banner-img.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Deuxieme section coupe de glace-->
+
+  <section>
+    <div class="container my-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-5 col-md-12 mx-5 mt-5">
+          <img class="img-fluid" src="./public/css/img romyk/about-img.png" alt="" />
+        </div>
+        <div class="col-lg-6 col-md-12 mt-5 text-center text-lg-start">
+          <h1 class="fw-bold pb-5">About Ice-Cream</h1>
+          <p class="text-muted">
+            Ice cream is a beloved frozen dessert enjoyed by people of <br />
+            all ages Made from cream, sugar, and a variety of flavors, <br />
+            it provides a refreshing treat on hot days. From classic <br />
+            vanilla to exotic mango, the options are endless Whether <br />
+            scooped into a served in a bowl, or blended milkshake, <br />
+            ice cream is your treat! 🍦
+          </p>
+          <button type="button" class="btn btn-secondary btn-lg">
+            Secondary
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Troisieme section menu de glace-->
+
+  <section>
+    <div class="text-center my-5">
+      <h1 class="fw-bold">Our Featured Ice-Cream</h1>
+      <p class="text-muted">Ice cream is a beloved frozen dessert enjoyed</p>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="row mx-auto">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card text-center carte">
+            <div class="p-5">
+              <img class="card-img-top img-fluid" style="width: 40%; margin: 0 auto"
+                src="./public/css/img romyk/img-1.png" alt="" />
             </div>
+            <div class=" card-body p-carte">
+              <p class="prond">$10</p>
+              <h4 class="pt-5">Strawberry Ice-Cream</h4>
+              <button type="button" class="btnCard btn btn-outline-secondary rounded-pill">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card text-center carte">
+            <div class="p-5">
+              <img class="card-img-top img-fluid" style="width: 15%; margin: 0 auto"
+                src="./public/css/img romyk/img-2.png" alt="" />
+            </div>
+            <div class="card-body p-carte">
+              <p class="prond">$10</p>
+              <h4 class="pt-5">Strawberry Ice-Cream</h4>
+              <button type="button" class="btnCard btn btn-outline-secondary rounded-pill">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card text-center carte">
+            <div class="p-5">
+              <img class="card-img-top img-fluid" style="width: 40%; margin: 0 auto"
+                src="./public/css/img romyk/img-1.png" alt="" />
+            </div>
+            <div class="card-body p-carte">
+              <p class="prond">$10</p>
+              <h4 class="pt-5">Strawberry Ice-Cream</h4>
+              <button type="button" class="btnCard btn btn-outline-secondary rounded-pill">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="row mx-auto">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="carte card text-center">
+            <div class="p-5">
+              <img class="card-img-top img-fluid" style="width: 40%; margin: 0 auto"
+                src="./public/css/img romyk/img-3.png" alt="" />
+            </div>
+            <div class=" card-body p-carte">
+              <p class="prond">$10</p>
+              <h4 class="pt-5">Strawberry Ice-Cream</h4>
+              <button type="button" class="btnCard btn btn-outline-secondary rounded-pill">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="carte card text-center">
+            <div class="p-5 ">
+              <img class="card-img-top img-fluid" style="width: 40%; margin: 0 auto"
+                src="./public/css/img romyk/img-4.png" alt="" />
+            </div>
+            <div class=" card-body p-carte">
+              <p class="prond">$10</p>
+              <h4 class="pt-4 pp">Strawberry Ice-Cream</h4>
+              <button type="button" class="btnCard btn btn-outline-secondary rounded-pill">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="carte card text-center">
+            <div class="p-5 v">
+              <img class="card-img-top img-fluid " style="width: 40%; margin: 0 auto"
+                src="./public/css/img romyk/img-5.png" alt="" />
+            </div>
+            <div class=" card-body p-carte">
+              <p class="prond">$10</p>
+              <h4 class="pt-5 pp">Strawberry Ice-Cream</h4>
+              <button type="button" class="btnCard btn btn-outline-secondary rounded-pill">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center my-4">
+      <button type="button" class="btn btn-secondary btn-lg">
+        Secondary
+      </button>
+    </div>
+  </section>
+
+  <!--quatrieme section Services-->
+
+  <section>
+    <div class="text-start px-3 mx-5 my-5">
+      <h1 class="mx-1">
+        Our Ice-Cream Services
+        <span class="text-center mx-5 pl-5 trait-rose">____</span>
+      </h1>
+      <p class="text-muted mx-1">
+        Ice cream is a beloved frozen dessert enjoyed
+      </p>
+    </div>
+    <div class="container my-2">
+      <div class="row text-start">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="bordure p-4 h-100">
+            <h4>
+              <img class="img-fluid" src="./public/css/img romyk/icon-1.png" alt="" />
+              <span class="ms-2"> Cookies Ice-Cream</span>
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur <br />
+              adipisicing elit. Eum at voluptates <br />
+              illum, dolor esse omnis
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="bordure p-4 h-100">
+            <h4>
+              <img class="img-fluid" src="./public/css/img romyk/icon-1.png" alt="" />
+              <span class="ms-2"> Cookies Ice-Cream</span>
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur <br />
+              adipisicing elit. Eum at voluptates <br />
+              illum, dolor esse omnis
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="bordure p-4 h-100">
+            <h4>
+              <img class="img-fluid" src="./public/css/img romyk/icon-1.png" alt="" />
+              <span class="ms-2"> Cookies Ice-Cream</span>
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur <br />
+              adipisicing elit. Eum at voluptates <br />
+              illum, dolor esse omnis
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <button type="button" class="btn btn-secondary text-center btn-lg">
+          Secondary
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!--cinquieme section Carousel-->
+
+  <section>
+    <div class="container my-5">
+      <div class="pt-5">
+        <h1 class="text-center">Testimonial</h1>
+      </div>
+      <div id="carouselExampleFade"
+        class="carousel slide carousel-fade d-flex justify-content-center align-items-center" style="height: 100vh">
+        <div class="carousel-inner parent">
+          <div class="carousel-item active">
             <div>
-                <button type="button" class="btn btn1">Login <i class="bi bi-person-fill"></i></button>
+              <p class="text-center m-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Numquam expedita doloribus eum accusamus rerum dolorem
+                asperiores eligendi quae cupiditate vel, nam, qui corporis
+                odio repellendus cum voluptas, obcaecati ipsa. Id quod ipsa
+                sapiente pariatur quos dignissimos esse vitae iusto, veritatis
+                ab nobis in expedita, rerum eligendi recusandae temporibus
+                cumque maxime.
+              </p>
+              <h5 class="text-center pt-5">Marie Fen</h5>
             </div>
-        </div>
-    </nav>
-    
-
-    <section>
-        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-            <div class="row d-flex justify-content-center align-items-center mx-4">
-                <div class="col-lg-6 col-md-12 text-center text-lg-start">
-                    <h1 class="fw-bold display-1">Ice <br> Cream</h1>
-                    <p class="text-muted">Ice cream is a delightful frozen treat made from <br> cream, sugar, and flavors. Enjoyed worldwide, it brings happiness <br> in various forms, from cones to sundaes.</p>
-                    <button type="button" class="btn btn-lg">Secondary</button>
-                </div>
-                <div class="col-lg-5 col-md-12">
-                    <img class="img-fluid image" src="./public/css/img romyk/banner-img.png" alt="">
-                </div>
+            <div class="imgCarous">
+              <img src="./public/css/img romyk/client-img.png" class="img-fluid mx-auto d-block" alt="Image 1" />
             </div>
+          </div>
+          <div class="carousel-item text-danger">
+            <p class="text-center m-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              expedita doloribus eum accusamus rerum dolorem asperiores
+              eligendi quae cupiditate vel, nam, qui corporis odio repellendus
+              cum voluptas, obcaecati ipsa. Id quod ipsa sapiente pariatur
+              quos dignissimos esse vitae iusto, veritatis ab nobis in
+              expedita, rerum eligendi recusandae temporibus cumque maxime.
+            </p>
+            <h5 class="text-center">Marie Fen</h5>
+            <img src="./public/css/img romyk/img-2.png" class="img-fluid mx-auto d-block" alt="Image 2" />
+          </div>
+          <div class="carousel-item text-primary">
+            <p class="text-center m-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              expedita doloribus eum accusamus rerum dolorem asperiores
+              eligendi quae cupiditate vel, nam, qui corporis odio repellendus
+              cum voluptas, obcaecati ipsa. Id quod ipsa sapiente pariatur
+              quos dignissimos esse vitae iusto, veritatis ab nobis in
+              expedita, rerum eligendi recusandae temporibus cumque maxime.
+            </p>
+            <h5 class="text-center">Marie Fen</h5>
+            <img src="./public/css/img romyk/img-3.png" class="img-fluid mx-auto d-block" alt="Image 3" />
+          </div>
+          <button class="bb carousel-control-prev btn btn-secondary opacity-100" style="width: 40px; height: 40px"
+            type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="bb carousel-control-next btn btn-secondary opacity-100" style="width: 40px; height: 40px"
+            type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-    </section>
-    
-    <section>
-        <div class="container my-5">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-lg-5 col-md-12 mx-5 mt-5">
-                    <img class="img-fluid" src="./public/css/img romyk/about-img.png" alt="">
-                </div>
-                <div class="col-lg-6 col-md-12 mt-5 text-center text-lg-start">
-                    <h1 class="fw-bold pb-5 vv">About Ice-Cream</h1>
-                    <p class="text-muted ">Ice cream is a beloved frozen dessert enjoyed by people of <br> all ages Made from cream, sugar, and a variety of flavors, <br> it provides a refreshing treat on hot days. From classic <br> vanilla to exotic mango, the options are endless Whether <br> scooped into a served in a bowl, or blended milkshake, <br> ice cream is your treat! 🍦</p>
-                    <button type="button" class="btn btn-secondary  btn-lg">Secondary</button>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Footer et formulaire-->
+
+  <footer>
+    <div class="container-fluid text-light w-100 py-5 p-5 bgFooter">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 my-5 footerGauche">
+          <h1 class="border-bottom titreF">Contact Us</h1>
+          <h6 class="border-bottom custom-width">NAME</h6>
+          <h6 class="border-bottom custom-width">EMAIL</h6>
+          <h6 class="border-bottom custom-width">PHONE NUMBER</h6>
+          <h6 class="border-bottom custom-width">MESSAGE</h6>
+          <button type="button" class="btn btn-danger mt-3 btn-lg footBtn">
+            SEND
+          </button>
         </div>
-    </section>
-    
-    <section>
-        <div class="text-center my-5" >
-            <h1 class="fw-bold">Our Featured Ice-Cream</h1>
-            <p class="text-muted">Ice cream is a beloved frozen dessert enjoyed</p>
+        <div class="col-lg-6 col-md-12 my-5 d-flex flex-column align-items-center justify-content-center">
+          <div class="footerDroitH">
+            <h6>
+              <i class="bi bi-geo-alt-fill iconColor"></i> Making this the first time.
+              <i class="bi bi-telephone-fill"></i> Call: +01 35534666544
+              <i class="bi bi-envelope-fill"></i> Email: demo@gmail.com
+            </h6>
+          </div>
+          <div class="mt-5 newsL">
+            <h5>Newsletter</h5>
+          </div>
+          <div class="d-flex w-75 inputBtn">
+            <input type="text" class="form-control me-2 inp" placeholder="Your email" />
+            <button type="button" class="btnFin btn btn-danger btn-lg">
+              RECHERCHE
+            </button>
+          </div>
+          <div class="d-flex justify-content-center mt-3 ">
+            <div class="iconS mx-2"><i class="bi bi-facebook"></i></div>
+            <div class="iconS mx-2"><i class="bi bi-twitter"></i></div>
+            <div class="iconS mx-2"><i class="bi bi-linkedin"></i></div>
+            <div class="iconS mx-2"><i class="bi bi-instagram"></i></div>
+          </div>
         </div>
-        <div class="container d-flex justify-content-center">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="aaa card text-center ">
-                        <div class="p-5">
-                            <img class="card-img-top img-fluid" style="width: 40%; margin: 0 auto;" src="./public/css/img romyk/img-1.png" alt="">
-                        </div>
-                        <div class="bb card-body bg-light ">
-                            <p class="prond">$10</p>
-                            <h4 class="pt-3">Strawberry Ice-Cream</h4>
-                            <button type="button" class="xx btn btn-outline-secondary rounded-pill">Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 text-center aaa">
-                        <div class="p-5">
-                            <img class="card-img-top img-fluid" style="width: 15%; margin: 0 auto;" src="./public/css/img romyk/img-2.png" alt="">
-                        </div>
-                        <div class="card-body bg-light">
-                            <p class="prond">$10</p>
-                            <h4 class="pt-3">Strawberry Ice-Cream</h4>
-                            <button type="button" class="xx btn btn-outline-secondary rounded-pill">Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 text-center aaa">
-                        <div class="p-5">
-                            <img class="card-img-top img-fluid" style="width: 40%; margin: 0 auto;" src="./public/css/img romyk/img-3.png" alt="">
-                        </div>
-                        <div class="card-body bg-light">
-                            <p class="prond">$10</p>
-                            <h4 class="pt-3">Strawberry Ice-Cream</h4>
-                            <button type="button" class="xx btn btn-outline-secondary rounded-pill">Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <hr>
+        <div class="col-12">
+          <p class="text-light text-center">2025-Projet Ice-Cream</p>
         </div>
-        <div class="container d-flex justify-content-center">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 text-center aaa">
-                        <div class="p-5">
-                            <img class="card-img-top img-fluid" style="width: 40%; margin: 0 auto;" src="./public/css/img romyk/img-4.png" alt="">
-                        </div>
-                        <div class="card-body bg-light py-">
-                            <p class="prond mt-3">$10</p>
-                            <h4 class="pt-3">Strawberry Ice-Cream</h4>
-                            <button type="button" class="xx btn btn-outline-secondary rounded-pill">Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 text-center aaa">
-                        <div class="p-5">
-                            <img class="card-img-top img-fluid pb-5" style="width: 40%; margin: 0 auto;" src="./public/css/img romyk/img-5.png" alt="">
-                        </div>
-                        <div class="card-body bg-light">
-                            <div class="">
-                                <p class="prond">$10</p>
-                            </div>
-                            <h4 class="pt-3">Strawberry Ice-Cream</h4>
-                            <button type="button" class="xx btn btn-outline-secondary rounded-pill">Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 text-center aaa">
-                        <div class="p-5">
-                            <img class="card-img-top img-fluid" style="width: 40%; margin: 0 auto;" src="./public/css/img romyk/img-3.png" alt="">
-                        </div>
-                        <div class="card-body bg-light">
-                            <p class="prond">$10</p>
-                            <h4 class="pt-3">Strawberry Ice-Cream</h4>
-                            <button type="button" class="xx btn btn-outline-secondary rounded-pill">Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center my-4">
-            <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
-        </div>
-    </section>
-    
-    <section>
-        <div class="text-start px-3 mx-5 my-5">
-            <h1 class="mx-1">Our Ice-Cream Services <span class="text-center mx-5 pl-5 rose">____</span></h1>
-            <p class="text-muted mx-1">Ice cream is a beloved frozen dessert enjoyed</p>
-        </div>
-        <div class="container my-2">
-            <div class="row text-start">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="bor  p-4 h-100">
-                        <h4><img class="img-fluid" src="./public/css/img romyk/icon-1.png" alt=""> <span class="ms-2"> Cookies Ice-Cream</span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eum at voluptates <br> illum, dolor esse omnis</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="bor p-4 h-100">
-                        <h4><img class="img-fluid" src="./public/css/img romyk/icon-1.png" alt=""> <span class="ms-2"> Cookies Ice-Cream</span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eum at voluptates <br> illum, dolor esse omnis</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="bor p-4 h-100">
-                        <h4><img class="img-fluid" src="./public/css/img romyk/icon-1.png" alt=""> <span class="ms-2"> Cookies Ice-Cream</span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eum at voluptates <br> illum, dolor esse omnis</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <button type="button" class="btn btn-secondary text-center btn-lg">Secondary</button>
-            </div>
-        </div>
-    </section>
-     
-    <section>
-        <div class="container my-5">
-            <div class="pt-5">
-                <h1 class="text-center">Testimonial</h1>
-            </div>
-            <div id="carouselExampleFade" class="carousel slide carousel-fade d-flex justify-content-center align-items-center" style="height: 100vh;">
-                <div class="carousel-inner parent">
-                    
-                    <div class="carousel-item active">
-                        
-                        <div>
-                            <p class="text-center m-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita doloribus eum accusamus rerum dolorem asperiores eligendi quae cupiditate vel, nam, qui corporis odio repellendus cum voluptas, obcaecati ipsa. Id quod ipsa sapiente pariatur quos dignissimos esse vitae iusto, veritatis ab nobis in expedita, rerum eligendi recusandae temporibus cumque maxime.</p>
-                        <h5 class="text-center pt-5">Marie Fen</h5>
-                        </div>
-                        <div class="imgCarous">
-                            <img src="./public/css/img romyk/client-img.png" class="img-fluid mx-auto d-block" alt="Image 1">
-                        </div>
-                    </div>
-                    <div class="carousel-item text-danger">
-                        <p class="text-center m-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita doloribus eum accusamus rerum dolorem asperiores eligendi quae cupiditate vel, nam, qui corporis odio repellendus cum voluptas, obcaecati ipsa. Id quod ipsa sapiente pariatur quos dignissimos esse vitae iusto, veritatis ab nobis in expedita, rerum eligendi recusandae temporibus cumque maxime.</p>
-                        <h5 class="text-center ">Marie Fen</h5>
-                        <img src="./public/css/img romyk/img-2.png" class="img-fluid mx-auto d-block" alt="Image 2">
-                    </div>
-                    <div class="carousel-item text-primary">
-                        <p class="text-center m-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita doloribus eum accusamus rerum dolorem asperiores eligendi quae cupiditate vel, nam, qui corporis odio repellendus cum voluptas, obcaecati ipsa. Id quod ipsa sapiente pariatur quos dignissimos esse vitae iusto, veritatis ab nobis in expedita, rerum eligendi recusandae temporibus cumque maxime.</p>
-                        <h5 class="text-center">Marie Fen</h5>
-                        <img src="./public/css/img romyk/img-3.png" class="img-fluid mx-auto d-block" alt="Image 3">
-                    </div>
-                    <button class="bb carousel-control-prev btn btn-secondary opacity-100" style="width: 40px; height: 40px;" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="bb carousel-control-next btn btn-secondary opacity-100" style="width: 40px; height: 40px;" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-               
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container-fluid text-light w-100 py-5 kk">
-            <div class="row">
-                <div class="col-md-5 my-5">
-                    <h1 class="border-bottom">Contact Us</h1>
-                    <h6 class="border-bottom">NAME</h6>
-                    <h6 class="border-bottom">EMAIL</h6>
-                    <h6 class="border-bottom">PHONE NUMBER</h6>
-                    <h6 class="border-bottom">MESSAGE</h6>
-                    <button type="button" class="carer btn btn-danger mt-3 btn-lg">SEND</button>
-                </div>
-                <div class="col-md-7 my-5 d-flex flex-column align-items-center justify-content-between">
-                    <div class="text-center">
-                        <h6><i class="bi bi-geo-alt-fill ii"></i> Making this the first time. <i class="bi bi-telephone-fill"></i> Call: +01 35534666544 <i class="bi bi-envelope-fill"></i> Email:demo@gmail.com</h6>
-                    </div>
-                    <div>
-                        <h5>Newsletter</h5>
-                    </div>
-                    <div class="d-flex w-50 qq">
-                      
-                        <input type="text" class="form-control me-2 car" placeholder="Your email">
-                        <button type="button" class="carer2 btn btn-danger btn-lg">RECHERCHE</button>
-                    </div>
-                    <div class="d-flex justify-content-around align-items-end">
-                        <div class="ro"><i class="bi bi-facebook"></i></div>
-                        <div class="ro"><i class="bi bi-twitter"></i></div>
-                        <div class="ro"><i class="bi bi-linkedin"></i></div>
-                        <div class="ro"><i class="bi bi-instagram"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-
-
-    
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -273,10 +426,21 @@
 
 
 
+  <script>
+    let all = document.querySelectorAll("*");
+    let boutton = document.querySelector(".Dark-Mode");
 
+    boutton.addEventListener("click", function () {
+      all.forEach(element => {
+        element.classList.toggle("dark-mode");
+      });
+    });
+  </script>
 
-
-    <script src="./public/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="./public/js/main.js"></script>
 </body>
+
 </html>

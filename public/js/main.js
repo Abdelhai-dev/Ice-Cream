@@ -1,3 +1,4 @@
+//Navbar
 let navBarre = document.getElementById("burger")
 let openBtn = document.getElementById("open")
 let closeBtn = document.getElementById("close")
@@ -15,11 +16,11 @@ function closeNav(){
 
 
 
-
+// Carousel
 document.addEventListener('DOMContentLoaded', function () {
     let myCarousel = document.querySelector('#carouselExampleFade');
     let carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 3000,  // 3 seconds
+        interval: 3000,  
         ride: 'carousel'
     });
 
@@ -34,3 +35,29 @@ document.addEventListener('DOMContentLoaded', function () {
         carousel.next();
     });
 });
+
+
+
+
+
+//Modal
+
+
+function showModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+function login() {
+    alert("Login functionality to be implemented");
+}
+
+function register() {
+    alert("Register functionality to be implemented");
+}
+function showModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+}

@@ -1,6 +1,65 @@
-body {
-    border-color: rgb(199, 133, 133);
+/* Dark-Mode*/
+
+.dark-mode {
+ 
+    background-color: black;
+    color: white !important;
+    cursor: pointer;
+    p {
+        color: wheat!important;
+    }
 }
+
+/* Modal*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btnRose {
+    background-color: #fb95c2;
+    color: white;
+}
+.lien {
+    text-decoration: none;
+    color: rgb(210, 206, 206);
+}
+.btn-modal {
+    display: flex;
+    gap: 35px !important;
+}
+
+/* NavBar*/
+
 .navb {
     height: 100%;
     width: 250px;
@@ -11,10 +70,10 @@ body {
     background-color: #e8e8E8;
     padding-top: 60px;
     transition: left 0.5s ease;
-    
-
 }
-
+.menu:hover {
+    color: #fb95c2 !important;
+}
 .navb a {
     padding: 8px 8px 8px 36px;
     text-decoration: none;
@@ -40,6 +99,9 @@ body {
     right: 25px;
     font-size: 36px;
 }
+.btnDark {
+    border: none;
+}
 .burger-icon {
     display: block;
     width: 35px;
@@ -47,6 +109,9 @@ body {
     background-color: black;
     margin: 6px 0;
 }
+
+/*Animation de l'image section 1*/
+
 .image {
     animation: up-down infinite alternate 2s;
 }
@@ -61,6 +126,8 @@ body {
         } 
 } 
 
+/*Couleur des bouttons*/
+
 .btn {
     background-color: #fb95c2!important;
     color: white !important;
@@ -72,36 +139,30 @@ body {
     display: inline-block !important;
     cursor: pointer !important;
 }
-.rose {
-    color: #fb95c2;
-    
+
+/*Troisieme section*/
+
+.carte {
+    width: 300px;
+    height: 350px !important;
+    background-color: #f4f2f2 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.xx {
+.carte:hover {
+    background-color: rgb(248, 239, 156) !important;
+}
+.p-carte {
+    background-color: white;
+    height: 355px !important;
+}
+.btnCard {
     background-color: white !important;
     color: #fb95c2!important;
     border: 1px solid #fb95c2!important ;
 }
-.xx:hover {
+.btnCard:hover {
     background-color: #fb95c2!important;
     color: white !important;
-}
-
-.aaa {
-    width: 300px;
-    background-color: #f4f2f2 !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-.aaa:hover {
-    background-color: rgb(248, 239, 156) !important;
-}
-
-.parent {
-    width: 100%;
-    height: 350px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    overflow: visible;
-    position: relative;
-    bottom: 100px;
 }
 .prond {
     position: absolute;
@@ -113,52 +174,121 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    bottom: 70px;
+    bottom: 130px;
     right: 110px;
     background-color: white;
     font-style: italic;
     font-weight:600 ;
 
 }
-.bor {
+.pp {
+    margin: 6px;
+}
+
+/*Carousel*/
+
+.bb {
+    margin-top: 150px;
+}
+
+/*Quatrieme section*/
+
+.trait-rose {
+    color: #fb95c2;   
+}
+
+.bordure {
     border: 1px solid #fb95c2!important;
     width: 370px;
 }
-.ii {
+
+/*Cinquieme sections*/
+
+.parent {
+    width: 100%;
+    height: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: visible;
+    position: relative;
+    bottom: 100px;
+}
+
+/*Footer sections*/
+
+.bgFooter {
+    background-color: #363636 !important;
+    height: 600px;   
+}
+.footerGauche {
+    margin-left: 60px;
+}
+.footerDroitH {
+    margin-bottom: 56px;
+}
+.footBtn {
+    margin-right: 30px;
+    border-radius: 0 !important;
+}
+.iconColor {
     color: #fb95c2;
 }
-.bb {
-    
+.inputBtn {
+    margin-left: 170px;
+    margin-bottom: 50px;   
 }
-.imgCarous {
-
-    overflow: visible;
-}
-.carer {
-    border-radius: 0 !important;
-}
-.carer2 {
-    border-radius: 0 !important;
-    
-}
-.car {
+.inp {
     border-radius: 0 !important;
     position: relative;
     left: 20px;
 }
-.border-bottom {
-   
+.btnFin {
+    border-radius: 0 !important;   
 }
-.qq {
-    margin-left: 200px;
-    margin-bottom: 50px;
-}
-.kk {
-    background-color: #363636 !important;
-}
-.ro {
+.iconS {
     width: 40px;
     height: 40px;
-    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636 ;
     border-radius: 50%;
+    position: relative;
+    left: 240px;   
 }
+.custom-width {
+    display: block;
+    width: 320px;
+    margin-bottom: 30px; 
+    border-color: #818181;
+}
+.newsL {
+    margin-right: 180px;
+}
+.titreF {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.v {
+    margin-bottom: 30px;
+}
+.z {
+    margin-top: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

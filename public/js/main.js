@@ -58,6 +58,3 @@ function login() {
 function register() {
     alert("Register functionality to be implemented");
 }
-function showModal(modalId) {
-    document.getElementById(modalId).style.display = 'block';
-}

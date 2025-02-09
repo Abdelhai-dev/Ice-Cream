@@ -110,7 +110,7 @@
     margin: 6px 0;
 }
 
-/*Animation de l'image section 1*/
+/*Animation de l'image section 1 */
 
 .image {
     animation: up-down infinite alternate 2s;

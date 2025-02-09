@@ -14,31 +14,33 @@
 </head>
 
 <body>
-  <!-- Login Modal -->
-  <div id="loginModal" class="modal bg-secondary">
-    <div class="modal-content bg-dark w-25 h-50">
-      <span class="close" onclick="closeModal('loginModal')">&times;</span>
-      <h1 class="text-center text-light">Login</h1>
-      <input class="bg-dark text-light" type="email" id="loginEmail" placeholder="Email">
-      <input class="bg-dark text-light" type="password" id="loginPassword" placeholder="Password">
-      <button class="btnRose" onclick="login()">Send</button>
-      <p class="text-center"><a class="lien" href="#" onclick="showModal('registerModal')">Not registered? Sign up
-          here</a></p>
-    </div>
-  </div>
+   
+   <!-- Login Modal -->
 
-  <!-- Register Modal -->
-  <div id="registerModal" class="modal bg-secondary">
-    <div class="modal-content bg-dark w-25">
-      <span class="close" onclick="closeModal('registerModal')">&times;</span>
-      <h1 class="text-center text-light">Register</h1>
-      <input class="bg-dark text-light" type="text" id="registerName" placeholder="Name">
-      <input class="bg-dark text-light" type="email" id="registerEmail" placeholder="Email">
-      <input class="bg-dark text-light" type="tel" id="registerPhone" placeholder="Phone Number">
-      <input class="bg-dark text-light" type="password" id="registerPassword" placeholder="Password">
-      <button class="btnRose" onclick="register()">Send</button>
+<div id="loginModal" class="modal bg-secondary">
+    <div class="modal-content bg-dark w-25 h-50">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h1 class="text-center text-light">Login</h1>
+        <input class="bg-dark text-light" type="email" id="loginEmail" placeholder="Email">
+        <input class="bg-dark text-light" type="password" id="loginPassword" placeholder="Password">
+        <button class="btnRose" onclick="login()">Send</button>
+        <p class="text-center"><a class="lien" href="#" onclick="showModal('registerModal')">Not registered? Sign up here</a></p>
     </div>
-  </div>
+</div>
+
+<!-- Register Modal -->
+
+<div id="registerModal" class="modal bg-secondary">
+    <div class="modal-content bg-dark w-25">
+        <span class="close" onclick="closeModal('registerModal')">&times;</span>
+        <h1 class="text-center text-light">Register</h1>
+        <input class="bg-dark text-light" type="text" id="registerName" placeholder="Name">
+        <input class="bg-dark text-light" type="email" id="registerEmail" placeholder="Email">
+        <input class="bg-dark text-light" type="tel" id="registerPhone" placeholder="Phone Number">
+        <input class="bg-dark text-light" type="password" id="registerPassword" placeholder="Password">
+        <button class="btnRose" onclick="register()">Send</button>
+    </div>
+</div>
 
   <!--NavBar-->
 

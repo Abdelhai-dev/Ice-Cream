@@ -17,27 +17,42 @@ function closeNav(){
 
 
 // Carousel
-document.addEventListener('DOMContentLoaded', function () {
-    let myCarousel = document.querySelector('#carouselExampleFade');
-    let carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 3000,  
-        ride: 'carousel'
-    });
 
-    let prevButton = document.querySelector('.carousel-control-prev');
-    let nextButton = document.querySelector('.carousel-control-next');
+document.addEventListener('DOMContentLoaded', function() {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
 
-    prevButton.addEventListener('click', function () {
-        carousel.prev();
-    });
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
 
-    nextButton.addEventListener('click', function () {
-        carousel.next();
-    });
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    function autoSlide() {
+        nextSlide();
+        setTimeout(autoSlide, 3000); // Change de slide toutes les 3 secondes
+    }
+
+    document.querySelector('.carousel-control-next').addEventListener('click', nextSlide);
+    document.querySelector('.carousel-control-prev').addEventListener('click', prevSlide);
+
+    // Démarre le carrousel automatique
+    autoSlide();
 });
-
-
-
 
 
 //Modal

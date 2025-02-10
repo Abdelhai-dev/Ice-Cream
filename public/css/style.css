@@ -30,6 +30,16 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 0 !important;
+}
+.b { 
+    text-decoration: none;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    margin: 10px;
+}
+.pp{
+    font-size: small;
 }
 
 .close {
@@ -208,7 +218,7 @@
     width: 100%;
     height: 350px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    overflow: visible;
+    /* overflow: visible; */
     position: relative;
     bottom: 100px;
 }
@@ -217,7 +227,6 @@
 
 .bgFooter {
     background-color: #363636 !important;
-    height: 600px;   
 }
 .footerGauche {
     margin-left: 60px;
@@ -232,14 +241,12 @@
 .iconColor {
     color: #fb95c2;
 }
-.inputBtn {
+/* .inputBtn {
     margin-left: 170px;
     margin-bottom: 50px;   
-}
+} */
 .inp {
     border-radius: 0 !important;
-    position: relative;
-    left: 20px;
 }
 .btnFin {
     border-radius: 0 !important;   
@@ -250,10 +257,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #363636 ;
+    background-color: white ;
+    color: #363636;
     border-radius: 50%;
-    position: relative;
-    left: 240px;   
+    /* position: relative;
+    left: 240px;    */
 }
 .custom-width {
     display: block;
@@ -261,9 +269,9 @@
     margin-bottom: 30px; 
     border-color: #818181;
 }
-.newsL {
+/* .newsL {
     margin-right: 180px;
-}
+} */
 .titreF {
     width: 250px;
     margin-bottom: 30px;

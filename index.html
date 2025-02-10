@@ -17,28 +17,29 @@
    
    <!-- Login Modal -->
 
-<div id="loginModal" class="modal bg-secondary">
+<div id="loginModal" class="modal">
     <div class="modal-content bg-dark w-25 h-50">
         <span class="close" onclick="closeModal('loginModal')">&times;</span>
-        <h1 class="text-center text-light">Login</h1>
-        <input class="bg-dark text-light" type="email" id="loginEmail" placeholder="Email">
-        <input class="bg-dark text-light" type="password" id="loginPassword" placeholder="Password">
+        <h1 class="text-center text-light b">Login</h1>
+        <input class="bg-dark text-light b" type="email" id="loginEmail" placeholder="Email">
+        <input class="bg-dark text-light b" type="password" id="loginPassword" placeholder="Password">
         <button class="btnRose" onclick="login()">Send</button>
-        <p class="text-center"><a class="lien" href="#" onclick="showModal('registerModal')">Not registered? Sign up here</a></p>
+        <p class="text-center mt-3 pp"><a class="lien" href="#" onclick="showModal('registerModal')">Not registered? Sign up here</a></p>
     </div>
 </div>
 
 <!-- Register Modal -->
 
-<div id="registerModal" class="modal bg-secondary">
+<div id="registerModal" class="modal">
     <div class="modal-content bg-dark w-25">
         <span class="close" onclick="closeModal('registerModal')">&times;</span>
-        <h1 class="text-center text-light">Register</h1>
-        <input class="bg-dark text-light" type="text" id="registerName" placeholder="Name">
-        <input class="bg-dark text-light" type="email" id="registerEmail" placeholder="Email">
-        <input class="bg-dark text-light" type="tel" id="registerPhone" placeholder="Phone Number">
-        <input class="bg-dark text-light" type="password" id="registerPassword" placeholder="Password">
+        <h1 class="text-center text-light b">Register</h1>
+        <input class="bg-dark text-light b" type="text" id="registerName" placeholder="Name">
+        <input class="bg-dark text-light b" type="email" id="registerEmail" placeholder="Email">
+        <input class="bg-dark text-light b" type="tel" id="registerPhone" placeholder="Phone Number">
+        <input class="bg-dark text-light b" type="password" id="registerPassword" placeholder="Password">
         <button class="btnRose" onclick="register()">Send</button>
+        <p class="text-light text-center mt-3 pp">You already have account ? Login</p>
     </div>
 </div>
 
@@ -215,7 +216,7 @@
             </div>
             <div class=" card-body p-carte">
               <p class="prond">$10</p>
-              <h4 class="pt-4 pp">Strawberry Ice-Cream</h4>
+              <h4 class="pt-4">Strawberry Ice-Cream</h4>
               <button type="button" class="btnCard btn btn-outline-secondary rounded-pill">
                 Add To Cart
               </button>
@@ -230,7 +231,7 @@
             </div>
             <div class=" card-body p-carte">
               <p class="prond">$10</p>
-              <h4 class="pt-5 pp">Strawberry Ice-Cream</h4>
+              <h4 class="pt-5">Strawberry Ice-Cream</h4>
               <button type="button" class="btnCard btn btn-outline-secondary rounded-pill">
                 Add To Cart
               </button>
@@ -317,47 +318,47 @@
       </div>
       <div id="carouselExampleFade"
         class="carousel slide carousel-fade d-flex justify-content-center align-items-center" style="height: 100vh">
-        <div class="carousel-inner parent">
+        <div class="parent">
           <div class="carousel-item active">
-            <div>
+            <div class="pt-5">
               <p class="text-center m-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Numquam expedita doloribus eum accusamus rerum dolorem
-                asperiores eligendi quae cupiditate vel, nam, qui corporis
+                Ipsum dolor sit amet consectetur adipisicing elit.
+                Numquam expedita doloribus eum accusamus rerum dolorem   
                 odio repellendus cum voluptas, obcaecati ipsa. Id quod ipsa
+                asperiores eligendi quae cupiditate vel, nam, qui corporis
                 sapiente pariatur quos dignissimos esse vitae iusto, veritatis
                 ab nobis in expedita, rerum eligendi recusandae temporibus
                 cumque maxime.
               </p>
-              <h5 class="text-center pt-5">Marie Fen</h5>
+              <h5 class="text-center">Marie Fen</h5>
             </div>
             <div class="imgCarous">
               <img src="./public/css/img romyk/client-img.png" class="img-fluid mx-auto d-block" alt="Image 1" />
             </div>
           </div>
-          <div class="carousel-item text-danger">
+          <div class="carousel-item text-danger pt-5">
             <p class="text-center m-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              Orem ipsum dolor sit amet consectetur adipisicing elit. Numquam
               expedita doloribus eum accusamus rerum dolorem asperiores
               eligendi quae cupiditate vel, nam, qui corporis odio repellendus
-              cum voluptas, obcaecati ipsa. Id quod ipsa sapiente pariatur
+              cum voluptas, obcaecati Id quod ipsa sapiente pariatur
               quos dignissimos esse vitae iusto, veritatis ab nobis in
               expedita, rerum eligendi recusandae temporibus cumque maxime.
             </p>
             <h5 class="text-center">Marie Fen</h5>
-            <img src="./public/css/img romyk/img-2.png" class="img-fluid mx-auto d-block" alt="Image 2" />
+            <img src="./public/css/img romyk/client-img.png" class="img-fluid mx-auto d-block" alt="Image 2" />
           </div>
-          <div class="carousel-item text-primary">
+          <div class="carousel-item text-primary pt-5">
             <p class="text-center m-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              Numquam asperiores eligendi quae cupiditate vel, nam, qui corporis
               expedita doloribus eum accusamus rerum dolorem asperiores
               eligendi quae cupiditate vel, nam, qui corporis odio repellendus
               cum voluptas, obcaecati ipsa. Id quod ipsa sapiente pariatur
               quos dignissimos esse vitae iusto, veritatis ab nobis in
-              expedita, rerum eligendi recusandae temporibus cumque maxime.
+              expedita, rerum eligendi recusandae temporibus burger cumque maxime.
             </p>
             <h5 class="text-center">Marie Fen</h5>
-            <img src="./public/css/img romyk/img-3.png" class="img-fluid mx-auto d-block" alt="Image 3" />
+            <img src="./public/css/img romyk/client-img.png" class="img-fluid mx-auto d-block" alt="Image 3" />
           </div>
           <button class="bb carousel-control-prev btn btn-secondary opacity-100" style="width: 40px; height: 40px"
             type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -377,9 +378,9 @@
   <!--Footer et formulaire-->
 
   <footer>
-    <div class="container-fluid text-light w-100 py-5 p-5 bgFooter">
+    <div class="container-fluid text-light w-100 p-5 pb-0 bgFooter">
       <div class="row">
-        <div class="col-lg-5 col-md-12 my-5 footerGauche">
+        <div class="col-lg-5 col-md-12 my-3 footerGauche">
           <h1 class="border-bottom titreF">Contact Us</h1>
           <h6 class="border-bottom custom-width">NAME</h6>
           <h6 class="border-bottom custom-width">EMAIL</h6>
@@ -389,24 +390,26 @@
             SEND
           </button>
         </div>
-        <div class="col-lg-6 col-md-12 my-5 d-flex flex-column align-items-center justify-content-center">
+        <div class="container col-lg-6 col-md-12 my-5 d-flex flex-column">
           <div class="footerDroitH">
-            <h6>
+            <h6 class="text-end">
               <i class="bi bi-geo-alt-fill iconColor"></i> Making this the first time.
               <i class="bi bi-telephone-fill"></i> Call: +01 35534666544
               <i class="bi bi-envelope-fill"></i> Email: demo@gmail.com
             </h6>
           </div>
-          <div class="mt-5 newsL">
-            <h5>Newsletter</h5>
+          <div class="d-flex flex-column align-items-end">
+            <div class="newsL w-75">
+              <h5>Newsletter</h5>
+            </div>
+            <div class="d-flex w-75 inputBtn">
+              <input type="text" class="form-control inp w-75" placeholder="Your email" />
+              <button type="button" class="btnFin btn btn-danger btn-lg w-25 fs-6">
+                RECHERCHE
+              </button>
+            </div>
           </div>
-          <div class="d-flex w-75 inputBtn">
-            <input type="text" class="form-control me-2 inp" placeholder="Your email" />
-            <button type="button" class="btnFin btn btn-danger btn-lg">
-              RECHERCHE
-            </button>
-          </div>
-          <div class="d-flex justify-content-center mt-3 ">
+          <div class="d-flex justify-content-end mt-5">
             <div class="iconS mx-2"><i class="bi bi-facebook"></i></div>
             <div class="iconS mx-2"><i class="bi bi-twitter"></i></div>
             <div class="iconS mx-2"><i class="bi bi-linkedin"></i></div>

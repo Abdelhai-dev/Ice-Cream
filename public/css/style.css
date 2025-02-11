@@ -1,3 +1,9 @@
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
 /* Dark-Mode*/
 
 .dark-mode {
@@ -47,6 +53,7 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+
 }
 
 .close:hover,
@@ -249,7 +256,8 @@
     border-radius: 0 !important;
 }
 .btnFin {
-    border-radius: 0 !important;   
+    border-radius: 0 !important; 
+    font-size: xx-small !important;  
 }
 .iconS {
     width: 40px;

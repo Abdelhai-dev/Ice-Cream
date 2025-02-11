@@ -73,3 +73,10 @@ function login() {
 function register() {
     alert("Register functionality to be implemented");
 }
+
+
+await setElementStyles($0, {
+    marginLeft: '0px',
+    marginRight: '0px',
+});
+const data = {};
